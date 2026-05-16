@@ -1,0 +1,40 @@
+# 1C Go multi-stage results (run Sat May 16 20:29:21 EEST 2026)
+1C-a: single-stage golang            size=878.1MB     build=21.08s
+1C-b: multi-stage FROM scratch       size=6.8MB       build=6.05s
+1C-c: multi-stage distroless         size=8.8MB       build=8.29s
+## 1C-a single-stage — relevant size hogs
+246M	/usr/local/go
+79M	/root
+11M	/app
+
+## 1C-b scratch — root contents (everything that ships)
+Usage:
+  fizzbuzz [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  query       Query if the number is fizz/buzz or fizzbuzz
+  serve       Run an http server to anser fizzbuzz queries
+
+Flags:
+  -h, --help   help for fizzbuzz
+
+Use "fizzbuzz [command] --help" for more information about a command.
+blobs/
+blobs/sha256/
+blobs/sha256/2384a8518fc997e98783762b024493199500cf876f7578f6b113b8a2a311d73f
+blobs/sha256/26e54563898a7322c9bf41acad955ddf7f99ae3594a81e699eddcd547e4d4cd8
+blobs/sha256/4d03b635464286edf9097e109692664ccf25631b0ea6cbf4fb4e75e7d3dd7669
+
+## 1C-c distroless — root contents
+blobs/
+blobs/sha256/
+blobs/sha256/02df359e12dc04f2d185d31e0dd000d316d5903153b9a3ae60f4da3396df8211
+blobs/sha256/0686226d887acd7aeb1b7ce2988dcef5e82a0488c4bf48fc4b14cb3bda297d4b
+blobs/sha256/0c0c302f0238d948697d74edae473b9153e5be58e39917f5d63461bd04f9b0b7
+blobs/sha256/0e43c62f4e38ee3a3f4ccb48ef2b997c088f8671faf40cb71b0c75e88c37b29e
+blobs/sha256/114dde0fefebbca13165d0da9c500a66190e497a82a53dcaabc3172d630be1e9
+blobs/sha256/14da965a3bf3d8e328a685c23e90c9250a84706b4164cb091935ad4ec6fc9325
+blobs/sha256/33b37ab0b0901175c2699d81c10b0c887f0dff944de74763cca00c155904d6fb
+blobs/sha256/3a1580d5bd5ff15c687d03b0f25e5768f55e323017804ecc2c356480a8c4b49e
