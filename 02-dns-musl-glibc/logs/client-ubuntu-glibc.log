@@ -1,0 +1,4 @@
+=== client image=ubuntu:latest  query=myservice.internal  search=corp ===
+10.0.0.50       myservice.internal.corp
+exit=0
+

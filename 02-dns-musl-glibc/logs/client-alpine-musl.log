@@ -1,0 +1,3 @@
+=== client image=alpine:latest  query=myservice.internal  search=corp ===
+exit=2
+
