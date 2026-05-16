@@ -15,8 +15,10 @@ fi
 # numpy variant uses requirements.txt with numpy + matrix endpoint
 NUMPY_REQ=$'fastapi\npydantic>=2.0\npydantic-settings\nstarlette\nuvicorn[standard]\nnumpy\n'
 
-# Patched api.py with matrix endpoint, for e-numpy/* experiments
-MATRIX_API_PATCH="$HERE/_e-numpy-api.py"
+# Patched api.py with matrix endpoint, for e-numpy/* experiments. Tmp file —
+# regenerated on every run, never committed to the repo.
+MATRIX_API_PATCH="$(mktemp -t lab2-matrix-api.XXXXXX.py)"
+trap 'rm -f "$MATRIX_API_PATCH"' EXIT
 cat > "$MATRIX_API_PATCH" <<'PY'
 import numpy as np
 from fastapi import APIRouter

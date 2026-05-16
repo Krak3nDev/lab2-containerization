@@ -1,3 +1,4 @@
 _src/
 *.tmp
 .DS_Store
+.omc/
