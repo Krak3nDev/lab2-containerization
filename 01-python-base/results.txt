@@ -1,0 +1,9 @@
+# 1A results (run on Sat May 16 20:28:30 EEST 2026)
+
+1A-a: naive (cold)              size=184.4MB     build=9.44s  (cold)
+1A-b: post-edit rebuild         size=184.4MB     build=6.90s  (warm)
+1A-c: cache-opt (cold)          size=184.4MB     build=6.17s  (cold)
+1A-c: cache-opt (post-edit)     size=184.4MB     build=0.73s  (warm)
+1A-d: alpine (cold)             size=87.6MB      build=11.01s  (cold)
+1A-e: numpy/debian (cold)       size=247.8MB     build=7.59s  (cold)
+1A-e: numpy/alpine (cold)       size=154.2MB     build=12.13s  (cold)
